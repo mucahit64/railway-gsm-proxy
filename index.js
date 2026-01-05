@@ -30,7 +30,7 @@ app.post("/gsm", async (req, res) => {
 
     const data = await response.json();
     res.status(response.status).json(data);
-  } catch (err: any) {
+  } catch (err) {
     console.error("Proxy error:", err.message || err);
     res.status(500).json({ error: "Proxy failed" });
   }
